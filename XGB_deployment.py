@@ -4,7 +4,6 @@ import numpy as np
 import joblib
 import sys
 
-
 def pred_price(info):
     input = info
     #Importar datos de test para comparar campos
@@ -46,7 +45,7 @@ def pred_price(info):
         New_Obs = New_Obs.transpose()
 
         #Importando el clasificador guardado
-        clf = joblib.load("\XGB_Car_Price.pkl") 
+        clf = joblib.load("XGB_Car_Price.pkl") 
 
         #Predicción del modelo
         pred_final = clf.predict(X = New_Obs)
